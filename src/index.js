@@ -11,9 +11,10 @@
 // └──────────┴┴───────────┴──────────┴──────┴──────────┴─┴──────────────┴───────┘
 // (all spaces in the "" line should be ignored -- they are purely for formatting)
 import fetch from 'whatwg-fetch'
+
 import url from 'url'
 
-const SDK = class SDK {
+class SDK {
   constructor(config) {
     this.config = config
     this.baseURl = url.parse(config.url)

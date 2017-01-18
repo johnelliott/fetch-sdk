@@ -7,7 +7,7 @@
     "build": "node_modules/.bin/babel src/index.js -o dist/built.js",
     "nah-build": "node_modules/.bin/browserify src/index.js -t [ babelify --presets [es2015] ] --outfile dist/bundle.js",
     "lint": "standard --verbose",
-    "budo": "budo src/index.js --serve bundle.js --live=*.{css,html} --css style.css -- -t [ babelify --presets [es2015] ] --outfile dist/bundle.js",
+    "budo": "budo src/index.js --serve bundle.js --live=src/*.{js} -- -t [ babelify --presets [es2015] ] --outfile dist/bundle.js",
     "start": "budo index.js --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
